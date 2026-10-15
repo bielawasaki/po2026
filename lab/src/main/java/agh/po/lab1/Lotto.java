@@ -1,4 +1,4 @@
-package agh.po.lab1.Random;
+package agh.po.lab1;
 
 import java.util.Arrays;
 import java.util.Random;
