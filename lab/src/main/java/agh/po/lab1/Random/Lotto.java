@@ -1,3 +1,5 @@
+package agh.po.lab1.Random;
+
 import java.util.Arrays;
 import java.util.Random;
 

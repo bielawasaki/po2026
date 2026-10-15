@@ -1,3 +1,5 @@
+package agh.po.lab1.Choinka;
+
 public class Choinka {
     public static void main(String[] args) {
         if (args.length < 1) {
