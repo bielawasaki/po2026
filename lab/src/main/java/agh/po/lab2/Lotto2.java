@@ -31,7 +31,7 @@ public class Lotto2 {
 
         intArgsList.retainAll(arr);
 
-        System.out.println("Liczba trafień: " + intArgsList.size());
+        System.out.println("Liczba trafien: " + intArgsList.size());
     }
 
     public static int getRandomInt(int min, int max) {
