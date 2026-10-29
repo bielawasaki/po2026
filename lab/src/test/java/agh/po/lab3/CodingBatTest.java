@@ -37,4 +37,12 @@ class CodingBatTest {
         assertEquals("tteesscciikk", cb.doubleChar("tescik"));
         assertEquals("pp--aa--ww--ee--ll!!", cb.doubleChar("p-a-w-e-l!"));
     }
+
+    @org.junit.jupiter.api.Test
+    void maxSpan() {
+        assertEquals(4, cb.maxSpan(new int[] {1,1,3,1,6,7}));
+        assertEquals(2, cb.maxSpan(new int[] {9,9,8,5,6,12}));
+        assertEquals(6, cb.maxSpan(new int[] {15,21,35,16,61,15}));
+        assertEquals(1, cb.maxSpan(new int[] {15,21,35,16,61,81}));
+    }
 }
