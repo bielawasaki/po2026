@@ -44,6 +44,24 @@ public class CodingBat {
         return sum;
     }
 
+    public Map<String, String> mapAB(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            map.put("ab", map.get("a") + map.get("b"));
+        }
+
+        return map;
+    }
+
+    public Map<String, Integer> wordLen(String[] strings) {
+      Map<String, Integer> map = new HashMap<>();
+      for (String str: strings) {
+          if (!map.containsKey(str)) {
+              map.put(str, str.length());
+          }
+      }
+      return map;
+    }
+
     public int maxSpan(int[] nums) {
         if (nums.length < 1) return 0;
 
