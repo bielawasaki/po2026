@@ -41,6 +41,10 @@ public class User {
         return profile;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public void setProfile(UserProfile profile) {
         this.profile = profile;
     }

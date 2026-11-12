@@ -73,6 +73,17 @@ class CodingBatTest {
         expectedMap.put("banana", 6);
         expectedMap.put("kiwi", 4);
 
+        String[] strings2 = {"cat", "dog", "elephant", "cat", "dog"};
+        Map<String, Integer> expectedMap2 = new HashMap<>();
+        expectedMap2.put("cat", 3);
+        expectedMap2.put("dog", 3);
+        expectedMap2.put("elephant", 8);
+
+        String[] strings3 = {};
+        Map<String, Integer> expectedMap3 = new HashMap<>();
+
         assertEquals(expectedMap, cb.wordLen(strings));
+        assertEquals(expectedMap2, cb.wordLen(strings2));
+        assertEquals(expectedMap3, cb.wordLen(strings3));
     }
 }

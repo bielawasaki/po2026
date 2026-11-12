@@ -50,6 +50,33 @@ public class UserRepository {
         users.insert(document);
     }
 
+    public void updateProfile(User user) {
+
+        Document profile = createDocument(
+                "displayName",
+                user.getProfile().getDisplayName()
+        )
+        .put("avatarId", user.getProfile().getAvatarId())
+        .put("bio", user.getProfile().getBio());
+
+        Document update = createDocument(
+                "username",
+                user.getUsername()
+        )
+        .put("profile", profile);
+
+        var result = users.update(
+                where("id").eq(user.getId()),
+                update
+        );
+
+        if (result.getAffectedCount() != 1) {
+            throw new IllegalStateException(
+                    "User update failed"
+            );
+        }
+    }
+
     public Optional<User> findByUsername(String username) {
 
         Document document = users.find(
